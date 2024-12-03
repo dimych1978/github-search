@@ -1,38 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 100px; /* Добавляем отступ сверху, чтобы не перекрывать контент */
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Product Sans', Arial, sans-serif;
+  font-size: 80px;
+  color: #000;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Устанавливаем высокий z-index, чтобы логотип был поверх других элементов */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 10px 20px;
+  width: 582px;
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  z-index: 1000; /* Устанавливаем высокий z-index, чтобы поисковая строка была поверх других элементов */
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar img {
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(230deg) brightness(90%) contrast(90%);
+}
+
+.sort-buttons {
+  margin-top: 70px;
+}
+
+.sort-buttons button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #5f6368;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.sort-buttons button:hover {
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.users {
+  margin-top: 20px;
+  width: 582px;
+  max-width: 100%;
+}
+
+.user {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #dfe1e5;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.user.selected {
+  background-color: #f8f9fa;
+  border: 1px solid #007bff;
+}
+
+.user span {
+  font-size: 16px;
+  color: #5f6368;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination a {
+  padding: 5px 10px;
+  border: 1px solid #dfe1e5;
+  border-radius: 4px;
+  color: #5f6368;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  background-color: #f8f9fa;
+}
+
+.pagination .active a {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.repositories {
+  margin-top: 20px;
+  width: 582px;
+  max-width: 100%;
+}
+
+.repository {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #dfe1e5;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.repository a {
+  color: #1a0dab;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.repository a:hover {
+  text-decoration: underline;
 }
