@@ -23,7 +23,7 @@ const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [repositories, setRepositories] = useState<Repository[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [_, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const usersPerPage = 20;
